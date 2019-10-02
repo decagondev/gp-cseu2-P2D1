@@ -1,0 +1,1 @@
+# create a basic Animal class add some getter and setter methods

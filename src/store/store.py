@@ -1,0 +1,1 @@
+# Create a store class with a name and categories

@@ -24,7 +24,7 @@ s = Store("Bob's Store", ["Shoes", "Hats", "Hellicopters", "Belts"])
 print(s)
 selection = 0
 
-while int(selection) != len(s.categories) + 1:
+while selection != len(s.categories) + 1:
     selection = input("Select the number of the department.")
     try:
         selection = int(selection)

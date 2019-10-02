@@ -1,5 +1,6 @@
 # Create a store class with a name and categories
 # fields name, categories
+from category import Category
 
 class Store:
     # constructor
@@ -12,14 +13,14 @@ class Store:
         output += self.name + "\n"
         i = 1
         for c in self.categories:
-            output += "  " + str(i) + ". " + c + "\n"
+            output += "  " + str(i) + ". " + c.name + "\n"
             i += 1
         
         # add an exit message
         output += "  " + str(i) + ". Exit"
         return output
 
-s = Store("Bob's Store", ["Shoes", "Hats", "Hellicopters", "Belts"])
+s = Store("Bob's Store", [Category("Shoes"), Category("Hats"), Category("Hellicopters"), Category("Belts")])
 
 print(s)
 selection = 0

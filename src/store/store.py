@@ -14,11 +14,25 @@ class Store:
         for c in self.categories:
             output += "  " + str(i) + ". " + c + "\n"
             i += 1
+        
+        # add an exit message
+        output += "  " + str(i) + ". Exit"
         return output
 
-s = Store("Bob's Store", ["Shoes", "Hats", "Hellicopters"])
+s = Store("Bob's Store", ["Shoes", "Hats", "Hellicopters", "Belts"])
 
 print(s)
-selection = input("Select the number of the department.")
+selection = 0
 
-print("The user selected " + str(selection))
+while int(selection) != len(s.categories) + 1:
+    selection = input("Select the number of the department.")
+    try:
+        selection = int(selection)
+        if selection == len(s.categories) + 1:
+            print(f"Thanks for shopping at {s.name}")
+        elif selection > 0 and selection <= len(s.categories):
+            print(s.categories[selection - 1])
+        else:
+            print("Select a valid number!")
+    except ValueError:
+        print("Please enter your choice as a number")

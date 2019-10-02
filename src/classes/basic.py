@@ -38,3 +38,5 @@ class Dog(Animal):
 a = Animal("Bob", 20)
 a.name = "Dave"
 a.age = 23
+d = Dog("Hound")
+d.get_legs()

@@ -4,8 +4,15 @@
 class Category:
 
     # constructor
-    def __init__(self, name): #, products)
+    def __init__(self, name, products):
         self.name = name
+        self.products = products
     # str
     def __str__(self):
-        return "No products available in " + self.name
+        output = "  " + self.name + "\n"
+        if len(self.products) < 1:
+            output = "No products available in " + self.name
+        for p in self.products:
+            output += "    " + str(p) + "\n"
+
+        return output

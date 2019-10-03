@@ -1,6 +1,8 @@
 # Create a store class with a name and categories
 # fields name, categories
 from category import Category
+from product import Product
+from tool import Tool
 
 class Store:
     # constructor
@@ -20,7 +22,7 @@ class Store:
         output += "  " + str(i) + ". Exit"
         return output
 
-s = Store("Bob's Store", [Category("Shoes"), Category("Hats"), Category("Hellicopters"), Category("Belts")])
+s = Store("Bob's Store", [Category("Shoes", []), Category("Hats", [Tool("Hammer", 1000, 6000.67)]), Category("Hellicopters", [Product("Generic Product", 5000.60)]), Category("Belts", [Product("Generic Product", 5000.60)])])
 
 print(s)
 selection = 0
